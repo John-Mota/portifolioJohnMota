@@ -46,4 +46,4 @@ Esse projeto está sob a licença MIT.
 
 ---
 
-Feito com ♥ John Mota  [Participe da nossa comunidade!](https://instagram.com/john.mota?utm_source=qr&igshid=ZDc4ODBmNjlmNQ%3D%3D)
+Feito com ♥ John Mota :wave: [Participe da nossa comunidade!](https://instagram.com/john.mota?utm_source=qr&igshid=ZDc4ODBmNjlmNQ%3D%3D)
