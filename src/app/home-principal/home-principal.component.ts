@@ -14,21 +14,19 @@ export class HomePrincipalComponent {
     
 
   toggleTheme() {
-    console.log('toggleTheme() called');
     this.isDarkTheme = !this.isDarkTheme;
-  
-    console.log('isDarkTheme:', this.isDarkTheme);
-  
     const body = this.elementRef.nativeElement.ownerDocument.body;
-  
+    
     if (this.isDarkTheme) {
-      console.log('Applying dark theme');
       this.renderer.removeClass(body, 'light');
       this.renderer.addClass(body, 'dark');
-    } else {
-      console.log('Applying light theme');
+    } else {   
       this.renderer.removeClass(body, 'dark');
       this.renderer.addClass(body, 'light');
+    }
+    const button = this.elementRef.nativeElement.querySelector('#switch button');
+    if (button) {
+      button.classList.toggle('active', this.isDarkTheme);
     }
   }
   

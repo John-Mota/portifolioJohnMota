@@ -6,7 +6,7 @@
 
 .dark {
   --text-color: #ffffff;
-  --bg-url: url(./../../assets/bg-dark.jpg);
+  --bg-url: url(./../../assets/bg-dark-mobile.jpg);
   --stroke-color: rgba(225, 225, 225, 0.5);
   --border-color: rgba(225, 225, 225, 0.1);
   --border-color-hover: rgba(0, 0, 0, 0.2);
@@ -68,18 +68,22 @@ body * {
   background: white var(--switch-bg-url) no-repeat center;
   border: 0;
   border-radius: 50%;
-
   position: absolute;
   top: 50%;
-  z-index: 1;
-
   transform: translateY(-50%);
+  z-index: 1;
+  transition: left 0.3s ease-in-out; 
 }
 
 .light #switch button {
   right: 0;
   left: initial;
   background-image: var(--switch-bg-url);
+  left: 32px; 
+}
+
+#switch button.active {
+  left: 0; 
 }
 
 #switch span {
@@ -92,6 +96,7 @@ body * {
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
 }
+
 
 /* Links */
 ul {
