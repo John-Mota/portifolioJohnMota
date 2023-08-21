@@ -18,7 +18,7 @@ Programa exclusivo e criado para apresentar minhas skills como desenvolvedor <br
 <br>
 
 <p align="center">
-  <img alt="projeto DevLinks" src=".github/preview.jpg" width="100%">
+  <img alt="projeto DevLinks" src=".github/capa.png" width="100%">
 </p>
 
 ## 🚀 Tecnologias
