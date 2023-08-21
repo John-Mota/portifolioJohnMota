@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 
 .dark {
@@ -25,8 +26,8 @@
 }
 
 body {
-  
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 body * {
@@ -163,4 +164,14 @@ footer {
   font-size: 14px;
   text-align: center;
   padding: 24px 0;
+}
+
+@media (min-width: 700px) {
+  .dark {
+    --bg-url: url(./../../assets/bg-dark.jpg);
+  }
+
+  .light {
+    --bg-url: url(./../../assets/bg-clear.jpeg);
+  }
 }
