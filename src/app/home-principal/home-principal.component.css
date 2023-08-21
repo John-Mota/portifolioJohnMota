@@ -25,12 +25,12 @@
   --switch-bg-url: url(./../../assets/Sun.svg);
 }
 
-.body-div {
+body {
   background: var(--bg-url) no-repeat top center/cover;
   height: 100vh;
 }
 
-.body-div * {
+body * {
   font-family: "Inter", sans-serif;
   color: var(--text-color);
 }
