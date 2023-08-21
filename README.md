@@ -18,7 +18,7 @@ Programa exclusivo e criado para apresentar minhas skills como desenvolvedor <br
 <br>
 
 <p align="center">
-  <img alt="projeto DevLinks" src=".github/capa.png" width="100%">
+  <img alt="capa JohnMota" src=".github/capa.png" width="100%">
 </p>
 
 ## 🚀 Tecnologias
@@ -26,21 +26,19 @@ Programa exclusivo e criado para apresentar minhas skills como desenvolvedor <br
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - HTML e CSS
-- JavaScript
+- TypeScript
 - Git e Github
-- Figma
+- Angular
 
 ## 💻 Projeto
 
-O DevLinks é um agregador de links para usar como cartão de visitas online.
+Este projeto  é um agregador de links para usar como cartão de visitas online.
 
-- [Acesse o projeto finalizado, online](https://maykbrito.github.io/devlinks)
+- [Acesse o projeto finalizado, online](#)
 
-- [Assistir aulas](https://lp.rocketseat.com.br/devlinks/inscricao?utm_source=github&utm_medium=descricao&utm_campaign=capture-devlinks&utm_term=organic&utm_content=descricao-github-mayk-brito)
+- [Linkedin](https://www.linkedin.com/in/john-mota-026044203/)
 
-## 🔖 Layout
 
-Você pode visualizar o layout do projeto através [DESSE LINK](https://www.figma.com/community/file/1187422022288947321). É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
 
 ## :memo: Licença
 
@@ -48,4 +46,4 @@ Esse projeto está sob a licença MIT.
 
 ---
 
-Feito com ♥ by Rocketseat :wave: [Participe da nossa comunidade!](https://discord.gg/rocketseat)
+Feito com ♥ John Mota  [Participe da nossa comunidade!](https://instagram.com/john.mota?utm_source=qr&igshid=ZDc4ODBmNjlmNQ%3D%3D)
