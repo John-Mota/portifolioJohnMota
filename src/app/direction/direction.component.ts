@@ -1,4 +1,6 @@
-import { Component, Renderer2, ElementRef } from '@angular/core';
+import { Component } from '@angular/core';
+import { FunctionsService } from '../functions.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'direction',
@@ -7,30 +9,22 @@ import { Component, Renderer2, ElementRef } from '@angular/core';
 })
 export class DirectionComponent {
 
-  isDarkTheme = true
+  constructor(
+    private themeService: FunctionsService,
+    private router: Router
+  ) {}
 
 
-  constructor(private renderer: Renderer2, private elementRef: ElementRef) {}
-
-
-  toggleTheme() {
-    this.isDarkTheme = !this.isDarkTheme;
-    const body = this.elementRef.nativeElement.ownerDocument.body;
-
-    if (this.isDarkTheme) {
-      this.renderer.removeClass(body, 'light');
-      this.renderer.addClass(body, 'dark');
-    } else {
-      this.renderer.removeClass(body, 'dark');
-      this.renderer.addClass(body, 'light');
-    }
-    const button = this.elementRef.nativeElement.querySelector('#switch button');
-    if (button) {
-      button.classList.toggle('active', this.isDarkTheme);
-    }
+  get isDarkTheme() {
+    return this.themeService.isDarkTheme$;
   }
 
+  toggleTheme() {
+    this.themeService.toggleTheme();
+  }
 
-
+  goToHome() {
+  this.router.navigate(['/home']);
+  }
 
 }

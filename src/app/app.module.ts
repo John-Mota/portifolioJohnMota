@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { DirectionComponent } from './direction/direction.component';
 ;
 import { HomePageComponent } from './home-page/home-page.component';
+import { FunctionsService } from './functions.service';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import { HomePageComponent } from './home-page/home-page.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [FunctionsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

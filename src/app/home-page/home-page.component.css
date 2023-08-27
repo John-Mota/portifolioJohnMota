@@ -6,7 +6,7 @@
 }
 
 .dark {
-  --text-color: #ffffff;
+  --text-color: #3b2727;
   --bg-url: url(./../../assets/bg-dark-mobile.jpg);
   --stroke-color: rgba(225, 225, 225, 0.5);
   --border-color: rgba(225, 225, 225, 0.1);
