@@ -2,36 +2,48 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
 
 .dark {
-  --text-color: #3b2727;
-  --bg-url: url(./../../assets/bg-dark-mobile.jpg);
-  --stroke-color: rgba(225, 225, 225, 0.5);
-  --border-color: rgba(225, 225, 225, 0.1);
-  --border-color-hover: rgba(0, 0, 0, 0.2);
-  --hightlight-color: rgba(255, 255, 255, 0.2);
-  --switch-bg-url: url(./../../assets/MoonStars.svg);
+  #home_nav_link {
+    color: #ffffff;
+
+  }
+  .navbar-expand-lg {
+    height: 50px;
+    background-image: url(./../../assets/bg-dark.jpg);
+    width: 100%;
+  }
+  --theme-bg: linear-gradient(to bottom, #141313, #1f1e1e);
+  --text-color: #ffffff;
 }
 
 .light {
-  --text-color: #000000;
-  --bg-url: url(./../../assets/bg-mobile-clear.jpeg);
-  --stroke-color: rgba(0, 0, 0, 0.5);
-  --border-color: rgba(0, 0, 0, 0.1);
-  --border-color-hover: rgba(0, 0, 0, 0.2);
-  --hightlight-color: rgba(0, 0, 0, 0.1);
-  --switch-bg-url: url(./../../assets/Sun.svg);
+  .navbar-expand-lg {
+    height: 50px;
+    background-image: url(./../../assets/bg-clear.jpg);
+
+  }
+    --theme-bg: linear-gradient(to bottom, #f0f0f0, #ffffff);
+    --text-color: #000000;
 }
 
 body {
-  background: var(--bg-url) no-repeat top center/cover;
+  background: var(--theme-bg);
   height: 100vh;
+  padding-top: 20px;
 }
 
 body * {
   font-family: "Inter", sans-serif;
   color: var(--text-color);
+}
+
+.presentation {
+  width: auto;
+  margin: 0px auto 0 auto;
+  padding-top: 20px;
+  text-align: center;
+  background: var(--theme-bg);
 }
 
