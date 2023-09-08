@@ -1,13 +1,11 @@
 <body [ngClass]="(isDarkTheme | async) ? 'dark' : 'light'">
-
-  <div id="container" >
-
+  <div id="container">
     <div id="profile">
-      <img [src]="isDarkTheme ? './../../assets/avatar-dark.png' : './../../assets/avatar-light.png'" alt="">
+      <img [src]="(isDarkTheme | async) ? '../../assets/avatar-dark.png' : '../../assets/avatar-light.png'" alt="">
       <p>@john.mota</p>
     </div>
     <div (click)="toggleTheme()" id="switch">
-      <button [class.active]="isDarkTheme"></button>
+      <button [class.active]="(isDarkTheme | async)"></button>
       <span></span>
     </div>
     <ul>
@@ -15,39 +13,26 @@
         <a routerLink="/home">Veja meu Portifólio</a>
       </li>
       <li>
-        <a
-        href="#"
-        >Baixe meu e-book</a>
+        <a href="#">Baixe meu e-book</a>
       </li>
       <li>
-        <a
-        href="https://mota-movies.netlify.app"
-        target="_blank">API de Filmes</a>
+        <a href="https://mota-movies.netlify.app" target="_blank">API de Filmes</a>
       </li>
-
       <li>
-        <a href="#" >Dê a sua Opinião</a>
+        <a href="#">Dê a sua Opinião</a>
       </li>
-
     </ul>
     <div id="social-links">
-      <a
-        href="https://www.linkedin.com/in/john-mota-026044203/"
-        target="_blank">
+      <a href="https://www.linkedin.com/in/john-mota-026044203/" target="_blank">
         <i class="bi bi-linkedin"></i>
       </a>
-      <a
-        href="https://github.com/John-Mota"
-        target="_blank">
+      <a href="https://github.com/John-Mota" target="_blank">
         <i class="bi bi-github"></i>
       </a>
-      <a
-        href="https://instagram.com/john.mota?utm_source=qr&igshid=ZDc4ODBmNjlmNQ%3D%3D"
-        target="_blank">
+      <a href="https://instagram.com/john.mota?utm_source=qr&igshid=ZDc4ODBmNjlmNQ%3D%3D" target="_blank">
         <i class="bi bi-instagram"></i>
       </a>
     </div>
-
     <footer>
       <p>Colabore com meu desenvolvimento</p>
     </footer>
