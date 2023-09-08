@@ -1,7 +1,7 @@
 <body [ngClass]="(isDarkTheme | async) ? 'dark' : 'light'">
 
   <div id="container" >
-    
+
     <div id="profile">
       <img [src]="isDarkTheme ? './../../assets/avatar-dark.png' : './../../assets/avatar-light.png'" alt="">
       <p>@john.mota</p>
@@ -12,9 +12,7 @@
     </div>
     <ul>
       <li>
-        <a
-        href="home"
-        target="_self">Veja meu Portifólio</a>
+        <a routerLink="/home">Veja meu Portifólio</a>
       </li>
       <li>
         <a
