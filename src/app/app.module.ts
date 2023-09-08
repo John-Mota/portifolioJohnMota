@@ -7,12 +7,14 @@ import { DirectionComponent } from './direction/direction.component';
 ;
 import { HomePageComponent } from './home-page/home-page.component';
 import { FunctionsService } from './functions.service';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DirectionComponent,
-    HomePageComponent
+    HomePageComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
