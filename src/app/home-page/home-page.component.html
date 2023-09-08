@@ -1,21 +1,21 @@
 <header [ngClass]="isDarkTheme ? 'dark' : 'light'">
-  <div id="header-home">
-    <nav class="navbar navbar-expand-lg ">
+    <nav id="header-home" class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class=" navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 ">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" id="home_nav_link" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" href="#">Home</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" id="home_nav_link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
                 Dropdown
               </a>
-              <ul [ngClass]="isDarkTheme ? 'dark' : 'light'" class="dropdown-menu">
+              <ul class="dropdown-menu" [ngClass]="isDarkTheme ? 'dark' : 'light'">
                 <li><a class="dropdown-item" href="#">Gerar CEP</a></li>
                 <li><a class="dropdown-item" href="#">API de Filmes</a></li>
                 <li>
@@ -28,41 +28,87 @@
         </div>
       </div>
     </nav>
-  </div>
 </header>
+
 <body [ngClass]="isDarkTheme ? 'dark' : 'light'">
-  <div class="container card presentation">
-      <div class="">
-        <h5 class="card-title">Desenvolvedor Web em Ascensão</h5>
-        <p class="card-text">
-          Sou um programador entusiasta em constante evolução. Cada linha de
-           código é uma oportunidade para aprender e crescer.
-          Estou aberto a projetos emocionantes e oportunidades de aprendizado
-          para expandir meu conhecimento e contribuir para
-          soluções inovadoras.
-        </p>
-       <h5>Minhas Habilidades</h5>
-        <div class="card-text">
-          <p>Angular, HTML, CSS: Domino o básico e estou sempre ansioso para
-             aprender mais. Adoro criar interfaces interativas e
-          elegantes.</p>
-          <p>
-            Node.js: Estou começando a explorar o mundo do backend com Node.js
-             e adorando cada desafio.
-          </p>
-          <p>
-            Nest.js: Tenho conhecimento inicial em Nest.js e estou animado para
-             aprofundar meu entendimento nessa estrutura.
-          </p>
-          <p>
-            Cypress: Comecei a explorar testes automatizados com Cypress e estou
-             pronto para aprimorar minhas habilidades nessa área
-            emocionante.
-          </p>
-        </div>
+  <div class="container hello">
+    <div class="center-content">
+      <div >
+        <h1>Olá Mundo, Eu Sou John Mota</h1>
+      </div>
+      <div >
+        <img src="./../../assets/avatar.png" alt="">
       </div>
     </div>
-  <div class="container">
+  </div>
 
+
+  <div class="container card presentation">
+    <div class="">
+      <h5 class="card-title">Desenvolvedor Web em Ascensão</h5>
+      <p class="card-text">
+        Sou um programador entusiasta em constante evolução. Cada linha de
+        código é uma oportunidade para aprender e crescer.
+        Estou aberto a projetos emocionantes e oportunidades de aprendizado
+        para expandir meu conhecimento e contribuir para
+        soluções inovadoras.
+      </p>
+      <h5>Minhas Habilidades</h5>
+      <div class="card-text">
+        <p>Angular, HTML, CSS: Domino o básico e estou sempre ansioso para
+          aprender mais. Adoro criar interfaces interativas e
+          elegantes.</p>
+        <p>
+          Node.js: Estou começando a explorar o mundo do backend com Node.js
+          e adorando cada desafio.
+        </p>
+        <p>
+          Nest.js: Tenho conhecimento inicial em Nest.js e estou animado para
+          aprofundar meu entendimento nessa estrutura.
+        </p>
+        <p>
+          Cypress: Comecei a explorar testes automatizados com Cypress e estou
+          pronto para aprimorar minhas habilidades nessa área
+          emocionante.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="container card presentation">
+    <div class="circle-container">
+      <div class="circle-row">
+        <a href="" class="col-md-3">
+          <div class="circle">
+            <div class="red-banner">
+              <p>EM BREVE</p>
+            </div>
+          </div>
+        </a>
+        <a href="" class="col-md-3">
+          <div class="circle">
+            <div class="red-banner">
+              <p>EM BREVE</p>
+            </div>
+          </div>
+        </a>
+        <a href="" class="col-md-3">
+          <div class="circle">
+            <div class="red-banner">
+              <p>EM BREVE</p>
+            </div>
+          </div>
+        </a>
+        <a href="" class="col-md-3">
+          <div class="circle">
+            <div class="red-banner">
+              <p>EM BREVE</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
   </div>
 </body>
+<footer style="height: 1100px;">
+
+</footer>
