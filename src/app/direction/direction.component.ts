@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FunctionsService } from '../functions.service';
+import { FunctionsService } from '../services/functions.service';
 import { Router } from '@angular/router';
 
 @Component({
