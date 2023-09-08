@@ -14,6 +14,13 @@
   --theme-card: #DDD;
 }
 
+
+.navbar-toggler {
+  background-color: var(--text-highlighted);
+  border: 1px solid var(--text-color);
+  color: var(--text-color);
+}
+
 #header-home {
   position: fixed;
   height: 50px;

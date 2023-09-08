@@ -30,4 +30,11 @@ export class HeaderComponent {
     }
   }
 
+  blurNavbarToggler() {
+    const navbarToggler = document.querySelector('.navbar-toggler') as HTMLButtonElement;
+    if (navbarToggler) {
+      navbarToggler.blur();
+    }
+  }
+
 }
