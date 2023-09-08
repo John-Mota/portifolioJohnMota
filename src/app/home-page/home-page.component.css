@@ -28,14 +28,11 @@ body * {
 }
 
 .dropdown-menu {
-  background: var(--theme-card);
+  background: #dfdede;
+  text-align: center;
 }
 
 .dark {
-  #home_nav_link {
-    color: var(--text-highlighted);
-  }
-
   --theme-bg: linear-gradient(to bottom, #141313, #1f1e1e);
   --text-color: #ffffff;
   --highlighted-text: #007ACC;
@@ -44,10 +41,6 @@ body * {
 }
 
 .light {
-  #home_nav_link {
-    color: var(--text-highlighted);
-  }
-
   --theme-bg: #FFFFFF;
   --text-color: #333333;
   --highlighted-text: #FFA500;
@@ -108,9 +101,10 @@ body * {
   height: 150px;
   background-color: #ccc;
   border-radius: 50%;
-
+  margin: 10px;
+  /* Ajuste a margem conforme necessário para criar o espaço desejado */
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   position: relative;
 }
