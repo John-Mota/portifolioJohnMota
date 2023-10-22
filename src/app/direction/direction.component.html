@@ -19,8 +19,9 @@
         <a href="https://mota-movies.netlify.app" target="_blank">API de Filmes</a>
       </li>
       <li>
-        <a href="#">Dê a sua Opinião</a>
+        <a href="#"(click)="openModal()">Dê a sua Opinião</a>
       </li>
+
     </ul>
     <div id="social-links">
       <a href="https://www.linkedin.com/in/john-mota-026044203/" target="_blank">
@@ -36,5 +37,73 @@
     <footer>
       <p>Colabore com meu desenvolvimento</p>
     </footer>
+  </div>
+  <div class="modal fade centered" #myModal tabindex="1" role="dialog" >
+    <div class="modal-dialog modal-dialog-centered mx-auto" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="formModal">Dê a sua Opinião</h5>
+        </div>
+        <div class="modal-body" id="formModal">
+        <form *ngIf="meuFormulario" [formGroup]="meuFormulario" (ngSubmit)="enviarFormulario()">
+          <div class="form-group">
+            <label for="name"></label>
+            <input placeholder="Nome" type="text" minlength="4" maxlength="70" class="form-control" id="name" name="name"
+              formControlName="name">
+            <div *ngIf="meuFormulario.get('name')?.touched && meuFormulario.get('name')?.hasError('required')"
+              class="alert " id="my-alert">
+              Nome Obrigatório
+            </div>
+            <div *ngIf="meuFormulario.get('name')?.touched && meuFormulario.get('name')?.hasError('minlength')"
+              class="alert " id="my-alert">
+              O nome deve ter pelo menos 4 caracteres
+            </div>
+            <div *ngIf="meuFormulario.get('name')?.touched && meuFormulario.get('name')?.hasError('maxlength')"
+              class="alert " id="my-alert">
+              O nome não pode ter mais de 70 caracteres
+            </div>
+          </div>
+
+          <div class="form-group" id="formModal">
+            <label for="email"></label>
+            <input placeholder="E-mail" maxlength="100" minlength="10" type="email" class="form-control" id="email" name="email"
+              formControlName="email">
+            <div *ngIf="meuFormulario.get('email')?.touched && meuFormulario.get('email')?.hasError('required')"
+              class="alert " id="my-alert">
+              Email é obrigatório.
+            </div>
+            <div *ngIf="meuFormulario.get('email')?.touched && meuFormulario.get('email')?.hasError('email')"
+              class="alert " id="my-alert">
+              Email inválido.
+            </div>
+          </div>
+
+          <div class="form-group" id="formModal">
+            <label for="suggestions"></label>
+            <textarea placeholder="Sugestões" maxlength="500" class="form-control" id="suggestions" name="suggestions"
+              formControlName="suggestions"></textarea>
+            <div *ngIf="meuFormulario.get('suggestions')?.touched && meuFormulario.get('suggestions')?.hasError('required')"
+              class="alert " id="my-alert">
+              Sugestões são obrigatórias.
+            </div>
+            <div *ngIf="meuFormulario.get('suggestions')?.touched && meuFormulario.get('suggestions')?.hasError('minlength')"
+              class="alert " id="my-alert">
+              Mínimo de 10 caracteres.
+            </div>
+            <div *ngIf="meuFormulario.get('suggestions')?.touched && meuFormulario.get('suggestions')?.hasError('maxlength')"
+              class="alert alert-danger">
+              Máximo de 500 caracteres.
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-center mt-3">
+            <button type="submit" class="btn btn-success btn-custom" [disabled]="meuFormulario.invalid">Salvar</button>
+            <button type="button" class="btn btn-danger btn-custom" (click)="closeModal()">Fechar</button>
+          </div>
+        </form>
+
+        </div>
+      </div>
+    </div>
   </div>
 </body>
