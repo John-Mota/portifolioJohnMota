@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class SendEmailService {
-  private apiUrl = 'http://localhost:3000/send-mail';
+  private apiUrl = 'https://portifolio-vercel-one.vercel.app/send-mail';
 
   constructor(private httpClient: HttpClient) { }
 
