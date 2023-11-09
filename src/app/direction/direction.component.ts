@@ -3,6 +3,7 @@ import { FunctionsService } from '../services/functions.service';
 import { Router } from '@angular/router';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { OpinionService } from '../services/opinion.service';
+import { SendEmailService } from '../services/send-email.service';
 
 @Component({
   selector: 'direction',
@@ -25,7 +26,8 @@ export class DirectionComponent {
     private themeService: FunctionsService,
     private opinionService: OpinionService,
     private router: Router,
-    private renderer: Renderer2
+    private renderer: Renderer2,
+    private sendEmailService: SendEmailService,
   ) {
     this.meuFormulario = new FormGroup({
       email: new FormControl(
@@ -74,21 +76,14 @@ export class DirectionComponent {
   }
 
   enviarFormulario() {
-    if (this.meuFormulario.valid) {
-      const feedback = this.meuFormulario.value;
-
-      // Salve os dados usando o OpinionService
-      this.opinionService.saveData(feedback);
-
-      // Limpar os campos do formulário após o salvamento bem-sucedido
-      this.meuFormulario.reset();
-
-      // Recarregue os dados salvos do localStorage
-      this.savedData = this.opinionService.getSavedData();
-
-      console.log('Dados salvos localmente com sucesso!');
-    } else {
-      console.log('Formulário inválido');
-    }
+    const { name, email, suggestions } = this.meuFormulario.value;
+    this.sendEmailService.enviarEmail(name, email, suggestions).subscribe(
+      () => {
+        this.closeModal()
+      },
+      (error) => {
+        console.error('Erro ao enviar email', error);
+      }
+    )
   }
 }

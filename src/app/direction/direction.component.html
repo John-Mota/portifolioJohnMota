@@ -2,7 +2,7 @@
   <div id="container">
     <div id="profile">
       <img [src]="(isDarkTheme | async) ? '../../assets/avatar-dark.png' : '../../assets/avatar-light.png'" alt="">
-      <p>@john.mota</p>
+      <p>&#64;john.mota</p>
     </div>
     <div (click)="toggleTheme()" id="switch">
       <button [class.active]="(isDarkTheme | async)"></button>
@@ -70,7 +70,7 @@
               formControlName="email">
             <div *ngIf="meuFormulario.get('email')?.touched && meuFormulario.get('email')?.hasError('required')"
               class="alert " id="my-alert">
-              Email é obrigatório.
+              Email Obrigatório.
             </div>
             <div *ngIf="meuFormulario.get('email')?.touched && meuFormulario.get('email')?.hasError('email')"
               class="alert " id="my-alert">
@@ -84,7 +84,7 @@
               formControlName="suggestions"></textarea>
             <div *ngIf="meuFormulario.get('suggestions')?.touched && meuFormulario.get('suggestions')?.hasError('required')"
               class="alert " id="my-alert">
-              Sugestões são obrigatórias.
+              Sugestão Obrigatório.
             </div>
             <div *ngIf="meuFormulario.get('suggestions')?.touched && meuFormulario.get('suggestions')?.hasError('minlength')"
               class="alert " id="my-alert">
