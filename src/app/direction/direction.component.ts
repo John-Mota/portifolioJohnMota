@@ -77,7 +77,9 @@ export class DirectionComponent {
 
   enviarFormulario() {
     const { name, email, suggestions } = this.meuFormulario.value;
-    this.sendEmailService.enviarEmail(name, email, suggestions).subscribe(
+    const timeZoneOffset = new Date().getTimezoneOffset();
+    const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    this.sendEmailService.enviarEmail(name, email, suggestions, timeZoneOffset, timeZone).subscribe(
       () => {
         this.closeModal()
       },
