@@ -160,10 +160,60 @@ ul li a:hover {
   background: var(--hightlight-color);
 }
 
+
+.modal-header h5.modal-title {
+  text-align: center;
+  margin: 5px auto;
+  color: #000000;
+}
+
+.modal-body {
+  margin: auto 10px;
+}
+
+.btn-custom {
+  width: 120px;
+  align-items: center;
+  margin: 15px 0 15px 15px ;
+}
+
+#formModal input, #formModal textarea {
+  color: #000000;
+}
+
+#formModal input {
+  height: 30px;
+}
+
+textarea {
+  height: 100px;
+}
+
+input:focus, textarea:focus {
+  box-shadow: none;
+}
+
+
+.modal-content {
+  height: 400px;
+  width: 400px;
+}
+
+
+
+#my-alert {
+  font-size: 0.6em;
+  color: red;
+}
+
 footer {
   font-size: 14px;
   text-align: center;
   padding: 24px 0;
+}
+
+.ng-invalid .ng-touched:not(form) {
+  border: 1px solid red;
 }
 
 @media (min-width: 700px) {
@@ -175,3 +225,4 @@ footer {
     --bg-url: url(./../../assets/bg-clear.jpg);
   }
 }
+
