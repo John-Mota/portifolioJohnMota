@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CalculatorService } from '../services/calculator.service';
 
+
 @Component({
   selector: 'app-calculator',
   templateUrl: './calculator.component.html',

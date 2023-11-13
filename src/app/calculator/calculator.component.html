@@ -6,7 +6,7 @@
         id="resultado"
         class="display"
         name="display"
-        [value]="this.result !== 0 ? this.result : displayValue + lastOperator"
+        [(ngModel)]="displayValue"
         readonly
         >
         <!--
