@@ -19,11 +19,19 @@
   background-color: var(--text-highlighted);
   border: 1px solid var(--text-color);
   color: var(--text-color);
+  outline: none;
+  box-shadow: none;
+}
+
+.toggle-menu {
+  background-color: var(--theme-card);
+  border: 1px solid var(--text-color);
+  color: var(--text-color)
 }
 
 #header-home {
   position: fixed;
-  height: 50px;
+  height: 60px;
   background: var(--theme-card);
   width: 100%;
   z-index: 1000;
