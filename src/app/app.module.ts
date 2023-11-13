@@ -12,6 +12,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { FunctionsService } from './services/functions.service';
 import { HeaderComponent } from './header/header.component';
 import { OpinionService } from './services/opinion.service';
+import { CalculatorComponent } from './calculator/calculator.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { OpinionService } from './services/opinion.service';
     AppComponent,
     DirectionComponent,
     HomePageComponent,
-    HeaderComponent
+    HeaderComponent,
+    CalculatorComponent
   ],
   imports: [
     BrowserModule,

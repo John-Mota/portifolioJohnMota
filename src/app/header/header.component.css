@@ -1,9 +1,9 @@
 .dark {
-  --theme-bg: linear-gradient(to bottom, #141313, #1f1e1e);
+  --theme-bg: #141313
   --text-color: #ffffff;
   --highlighted-text: #007ACC;
   --text-highlighted: #FFA500;
-  --theme-card: linear-gradient(to bottom, #262424, #2d2b2b);
+  --theme-card: #262424;
 }
 
 .light {
@@ -37,7 +37,11 @@
   z-index: 1000;
 }
 
-.navbar-expand-lg a {
+.name-router {
+  color: var(--text-highlighted);
+}
+
+.name-router a {
   color: var(--text-highlighted);
 }
 

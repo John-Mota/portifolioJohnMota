@@ -1,7 +1,7 @@
 <header [ngClass]="isDarkTheme ? 'dark' : 'light'">
   <nav class="navbar fixed-top " id="header-home" aria-expanded="false">
     <div class="container-fluid">
-      <h1 class="navbar-brand" href="#" >Portifólio John Mota</h1>
+      <h1 class="navbar-brand name-router" href="#" >Portifólio John Mota</h1>
       <button 
         class="navbar-toggler" 
         type="button" 
@@ -15,20 +15,31 @@
         tabindex="-1" id="offcanvasDarkNavbar" 
         aria-labelledby="offcanvasDarkNavbarLabel">
         <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Projetos</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          <h5 class="offcanvas-title name-router" id="offcanvasDarkNavbarLabel">Projetos</h5>
+          <button 
+            type="button" 
+            class="btn-close" 
+            data-bs-dismiss="offcanvas" 
+            aria-label="Close"></button>
         </div>
+        <hr>
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <li class="nav-item name-router">
+              <h4><a class="nav-link active" aria-current="page" routerLink="/">Página ínicial</a></h4>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+            <li class="nav-item name-router">
+              <a class="nav-link active" aria-current="page" href="/calculator">Calculadora</a>
             </li>
-            <li class="nav-item dropdown">
-              
+            <!-- <li class="nav-item name-router">
+              <a class="nav-link active" aria-current="page" href="#">Conversor de Moedas</a>
             </li>
+            <li class="nav-item name-router">
+              <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
+            </li>
+            <li class="nav-item name-router">
+              <a class="nav-link active" aria-current="page" href="#">Jogo da velha</a>
+            </li> -->
           </ul>
           
         </div>
