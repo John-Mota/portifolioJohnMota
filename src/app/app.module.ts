@@ -13,6 +13,7 @@ import { FunctionsService } from './services/functions.service';
 import { HeaderComponent } from './header/header.component';
 import { OpinionService } from './services/opinion.service';
 import { CalculatorComponent } from './calculator/calculator.component';
+import { JogoDaVelhaComponent } from './jogo-da-velha/jogo-da-velha.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { CalculatorComponent } from './calculator/calculator.component';
     DirectionComponent,
     HomePageComponent,
     HeaderComponent,
-    CalculatorComponent
+    CalculatorComponent,
+    JogoDaVelhaComponent
   ],
   imports: [
     BrowserModule,
