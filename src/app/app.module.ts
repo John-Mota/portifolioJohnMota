@@ -14,6 +14,7 @@ import { HeaderComponent } from './header/header.component';
 import { OpinionService } from './services/opinion.service';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { JogoDaVelhaComponent } from './jogo-da-velha/jogo-da-velha.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { JogoDaVelhaComponent } from './jogo-da-velha/jogo-da-velha.component';
     HomePageComponent,
     HeaderComponent,
     CalculatorComponent,
-    JogoDaVelhaComponent
+    JogoDaVelhaComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
