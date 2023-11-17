@@ -15,6 +15,9 @@ import { OpinionService } from './services/opinion.service';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { JogoDaVelhaComponent } from './jogo-da-velha/jogo-da-velha.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ListaComponent } from './gerenciador-de-tarefas/lista/lista.component';
+import { EditarTarefasComponent } from './gerenciador-de-tarefas/editar-tarefas/editar-tarefas.component';
+import { RegistrarTarefasComponent } from './gerenciador-de-tarefas/registrar-tarefas/registrar-tarefas.component';
 
 
 @NgModule({
@@ -25,7 +28,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     HeaderComponent,
     CalculatorComponent,
     JogoDaVelhaComponent,
-    DashboardComponent
+    DashboardComponent,
+    ListaComponent,
+    EditarTarefasComponent,
+    RegistrarTarefasComponent
   ],
   imports: [
     BrowserModule,
