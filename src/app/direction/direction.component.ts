@@ -88,4 +88,9 @@ export class DirectionComponent {
       }
     )
   }
+
+  abrirPdf(): void {
+    console.log('Clicou para abrir o PDF');
+    window.open('src/assets/20 dicas.pdf', '_blank');
+  }
 }
