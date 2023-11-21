@@ -1,19 +1,30 @@
 <header [ngClass]="isDarkTheme ? 'dark' : 'light'">
-  <nav class="navbar fixed-top " id="header-home" aria-expanded="false">
+  <nav id="header-home" class="navbar name-router navbar-expand-lg ">
     <div class="container-fluid">
-      
-      
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasDarkNavbar"
-          aria-controls="offcanvasDarkNavbar">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="name-router" href="">
-          <h1 style="font-size: 30px;" class="navbar-brand ">Portifólio John Mota</h1>
-        </a>     
+      <a class="navbar-brand" href="#">Página Inicial</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" routerLink="/calculator">Calculadora</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" routerLink="/jogo-da-velha">Jogo da Velha</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" routerLink="/dashboard"> Dashboard</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" routerLink="/tarefas/lista">Gerenciador de Tarefas</a>
+            </div>
+          </li>
+          
+        </ul>
+      </div>
       <div>
         <div id="social-links">
           <a href="https://www.linkedin.com/in/john-mota-026044203/" target="_blank">
@@ -25,50 +36,6 @@
           <a href="https://instagram.com/john.mota?utm_source=qr&igshid=ZDc4ODBmNjlmNQ%3D%3D" target="_blank">
             <i class="bi bi-instagram"></i>
           </a>
-        </div>
-      </div>
-      <div 
-        class="offcanvas offcanvas-start toggle-menu w-35" 
-        tabindex="-1" id="offcanvasDarkNavbar" 
-        aria-labelledby="offcanvasDarkNavbarLabel">
-        <div class="offcanvas-header">
-          <h5 
-            style="color: var(--text-highlighted);" 
-            class="offcanvas-title name-router" id="offcanvasDarkNavbarLabel">Projetos</h5>
-          <button 
-            type="button" 
-            class="btn-close new-btn" 
-            data-bs-dismiss="offcanvas" 
-            aria-label="Close"></button>
-        </div>
-        <hr style="color: var(--text-highlighted);">
-        <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item name-router">
-              <h4><a class="nav-link active" aria-current="page" routerLink="">Página ínicial</a></h4>
-              <!-- <a class="nav-link active" aria-current="page" routerLink="">Página ínicial</a> -->
-            </li>
-            <li class="nav-item name-router">
-              <a class="nav-link active" aria-current="page" href="calculator">Calculadora</a>
-            </li>
-            <li class="nav-item name-router">
-              <a class="nav-link active" aria-current="page" routerLink="/jogo-da-velha">Jogo da velha</a>
-            </li>
-            <li class="nav-item name-router">
-              <a class="nav-link active" aria-current="page" routerLink="/dashboard">Dashboard</a>
-            </li>
-            <li class="nav-item name-router">
-              <a class="nav-link active" aria-current="page" routerLink="/tarefas/lista">Gerenciador de Tarefas</a>
-            </li>
-            <li class="nav-item name-router">
-              <a 
-                class="nav-link active" 
-                aria-current="page" 
-                href="https://mota-movies.netlify.app" 
-                target="_blank">Projeto com Api de Filmes</a>
-            </li>
-          </ul>
-          
         </div>
       </div>
     </div>
