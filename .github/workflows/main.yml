@@ -1,0 +1,26 @@
+name: SonarQube Analysis
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+
+jobs:
+  build-and-scan:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run SonarScanner on community server (Docker)
+        run: |
+          docker run --rm --network=host \
+            -e SONAR_HOST_URL="https://2e7231a5e567.ngrok-free.app" \
+            -e SONAR_TOKEN="${{ secrets.SONAR_TOKEN }}" \
+            -v "$(pwd):/usr/src" \
+            sonarsource/sonar-scanner-cli \
+            -Dsonar.projectKey=portifolio \
+            -Dsonar.sources=. \
+            -Dsonar.branch.name="${{ github.ref_name }}"
