@@ -19,7 +19,7 @@ jobs:
           # The -e flags pass the environment variables to the Docker container.
           # The -v flag mounts the current project directory into the container.
           docker run --rm --network=host \
-            -e SONAR_HOST_URL="http://localhost:9000" \
+           -e SONAR_HOST_URL="https://2e7231a5e567.ngrok-free.app"\
             -e SONAR_LOGIN="${{ secrets.SONAR_TOKEN }}" \
             -v "$(pwd):/usr/src" \
             sonarsource/sonar-scanner-cli \
