@@ -1,0 +1,28 @@
+name: SonarQube Analysis
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+
+jobs:
+  build-and-scan:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run SonarScanner on community server
+        run: |
+          # The -e flags pass the environment variables to the Docker container.
+          # The -v flag mounts the current project directory into the container.
+          docker run --rm --network=host \
+            -e SONAR_HOST_URL="http://localhost:9000" \
+            -e SONAR_LOGIN="${{ secrets.SONAR_TOKEN }}" \
+            -v "$(pwd):/usr/src" \
+            sonarsource/sonar-scanner-cli \
+            -Dsonar.projectKey=portifolio \
+            -Dsonar.sources=. \
+            -Dsonar.branch.name="${{ github.ref_name }}"
