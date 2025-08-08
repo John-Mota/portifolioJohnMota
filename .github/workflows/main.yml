@@ -14,11 +14,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Run SonarScanner on community server
+      - name: Run SonarScanner on community server (Docker)
         run: |
           docker run --rm --network=host \
             -e SONAR_HOST_URL="https://2e7231a5e567.ngrok-free.app" \
-            -e SONAR_LOGIN="${{ secrets.SONAR_TOKEN }}" \
+            -e SONAR_TOKEN="${{ secrets.SONAR_TOKEN }}" \
             -v "$(pwd):/usr/src" \
             sonarsource/sonar-scanner-cli \
             -Dsonar.projectKey=portifolio \
